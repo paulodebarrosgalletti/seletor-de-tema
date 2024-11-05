@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: var(--header-bg);
+}
+
+.logo h1 {
+    color: var(--logo-color);
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 0.5em;
+    border: none;
+    background: #ddd;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #ccc;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+main {
+    padding: 2em;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    height: 100vh;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.video-card {
+    width: 200px;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    transform: scale(1.05);
+}
+
+.video-card img {
+    width: 100%;
+    height: auto;
+}
+
+.video-card h3 {
+    font-size: 1em;
+    margin: 0.5em;
+    color: var(--text-color);
+}
+
+.video-card p {
+    font-size: 0.9em;
+    margin: 0.5em;
+    color: #777;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f4f4f4;
+    --logo-color: #ff0000;
+    --card-bg: #ffffff;
+}
+
+body.dark-mode{
+    --bg-color: #181818;
+    --text-color: #e0e0e0;
+    --header-bg: #202020;
+    --logo-color: #ff0000;
+    --card-bg: #303030;
+}
